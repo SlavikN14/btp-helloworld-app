@@ -2,6 +2,14 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <VBox id="formContainer" class="sapUiSmallMargin">
+                <Label id="nameLabel" text="Name"/>
+                <Input id="nameInput" placeholder="Enter your name"/>
+                <Label id="emailLabel" text="Email"/>
+                <Input id="emailInput" placeholder="Enter your email"/>
+                <Button id="submitButton" text="Submit" type="Emphasized" press="onSubmit"/>
+            </VBox>
+        </content>
     </Page>
 </mvc:View>
