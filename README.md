@@ -17,7 +17,7 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
-## helloworldui5
+## helloworldui5 lol
 
 A Fiori Hello World application
 
