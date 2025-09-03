@@ -1,0 +1,59 @@
+name: Clean Cache
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Name of repository'
+        required: true
+        type: string
+      ref:
+        description: 'Branch name where to checkout'
+        required: true
+        type: string
+
+jobs:
+  clean-cache:
+    runs-on: ${{ vars.RUNNER_M_ARM }}
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Generate a token
+        id: generate-token
+        uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e # v2
+        with:
+          app-id: ${{ vars.JAVA_BACKEND_APP_ID }}
+          private-key: ${{ secrets.JAVA_BACKEND_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/${{ inputs.repository }}
+          ref: ${{ inputs.ref }}
+          token: ${{ steps.generate-token.outputs.token }}
+          fetch-depth: 0
+
+      - name: Configure AWS credentials
+        uses: ajax-systems/github-actions/aws/login@ajax-v3
+
+      - name: Retrieve Cache Metadata
+        id: cache-metadata
+        uses: ajax-systems/github-actions/gradle/cache/metadata@ajax-v3
+        with:
+          repository: '${{ github.repository_owner }}/${{ inputs.repository }}'
+
+      - name: Retrieve Cache Path
+        id: cache-path
+        run: |
+          cache_path=$(aws s3 ls s3://infra-github-private-runners-cache/cache/ajax-systems/${{ inputs.repository }}/ --recursive | head -1000 | grep "${{ steps.cache-metadata.outputs.primary-cache-key }}" | head -1 | awk '{print $4}')
+          echo "cache-path=$cache_path" >> $GITHUB_OUTPUT
+
+      - name: Clean Cache
+        run: |
+          if [[ -n "${{ steps.cache-path.outputs.cache-path }}" ]]; then
+            aws s3 rm "s3://infra-github-private-runners-cache/${{ steps.cache-path.outputs.cache-path }}"
+            echo "Cache ${{ steps.cache-metadata.outputs.key }} from ${{ inputs.repository }} is removed."
+          else
+            echo "No cache found for key ${{ steps.cache-metadata.outputs.key }}"
+          fi
