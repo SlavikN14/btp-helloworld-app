@@ -6,7 +6,7 @@
 |**App Generator Version**<br>1.15.1|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>simple|
-|**Service Type**<br>None|
+|**Service Type**<br>None|asdasdasd
 |**Service URL**<br>N/A|
 |**Module Name**<br>helloworldui5|
 |**Application Title**<br>Hello World App Title|
