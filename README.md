@@ -9,7 +9,7 @@
 |**Service Type**<br>None|
 |**Service URL**<br>N/A|
 |**Module Name**<br>helloworldui5|
-|**Application Title**<br>Hello World App Title|
+|**Application Title**<br>Hello World App Title|xzczxczxczxc
 |**Namespace**<br>sap.btp|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.129.1|
