@@ -1,4 +1,4 @@
-## Application Details
+## Application Details LOL
 |               |
 | ------------- |
 |**Generation Date and Time**<br>Tue Oct 08 2024 21:52:03 GMT+0000 (Coordinated Universal Time)|
