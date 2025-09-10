@@ -12,7 +12,7 @@ builder:
       - "/test/**"
       - "/localService/**"
   customTasks:
-  - name: webide-extension-task-updateManifestJson
+  - name: webide-extension-task-updateManifestJsondfdsfsdf
     afterTask: replaceVersion
     configuration:
       appFolder: webapp
