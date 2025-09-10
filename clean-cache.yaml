@@ -14,7 +14,7 @@ on:
 jobs:
   clean-cache:
     runs-on: ${{ vars.RUNNER_M_ARM }}
-    permissions:
+    permissions:asdasdsadasd
       contents: read
       id-token: write
     steps:
