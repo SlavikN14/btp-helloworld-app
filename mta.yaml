@@ -12,7 +12,7 @@ modules:
   - name: sapbtphelloworldui5-repo-host
     parameters:
       service-key:sadsadas
-        name: sapbtphelloworldui5-repo-host-key
+        name: sapbtphelloworldui5-repo-host-keysdfsdfsdfsdf
   - name: sapbtphelloworldui5-uaa
     parameters:
       service-key:
