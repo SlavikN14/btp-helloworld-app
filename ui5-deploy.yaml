@@ -9,7 +9,7 @@ resources:
 builder:
   resources:
     excludes:
-      - "/test/**"
+      - "/test/**"фффчфівфі
       - "/localService/**"
   customTasks:
   - name: webide-extension-task-updateManifestJson
