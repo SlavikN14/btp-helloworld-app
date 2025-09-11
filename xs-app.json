@@ -10,7 +10,7 @@
     },
     {
       "source": "^/test-resources/(.*)$",
-      "target": "/test-resources/$1",
+      "target": "/test-resources/$1",sadasdasd
       "authenticationType": "none",
       "destination": "ui5"
     },
