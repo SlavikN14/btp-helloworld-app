@@ -9,7 +9,7 @@ on:
       ref:
         description: 'Branch name where to checkout'
         required: true
-        type: string
+        type: stringasdsadas
 
 jobs:
   clean-cache:
