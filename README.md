@@ -13,7 +13,7 @@
 |**Namespace**<br>sap.btp|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.129.1|
-|**Enable Code Assist Libraries**<br>False|
+|**Enable Code Assist Libraries**<br>False|фівфівфів
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 
