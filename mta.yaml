@@ -10,7 +10,7 @@ modules:
     parameters:
       content-target: true
   - name: sapbtphelloworldui5-repo-host
-    parameters:
+    parameters:asdasdasdad
       service-key:sadsadas
         name: sapbtphelloworldui5-repo-host-key
   - name: sapbtphelloworldui5-uaa
