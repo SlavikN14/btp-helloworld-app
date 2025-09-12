@@ -7,7 +7,7 @@
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>simple|
 |**Service Type**<br>None|
-|**Service URL**<br>N/A|
+|**Service URL**<br>N/A|цйуцйу
 |**Module Name**<br>helloworldui5|
 |**Application Title**<br>Hello World App Title|
 |**Namespace**<br>sap.btp|
