@@ -6,7 +6,7 @@ on:
         description: 'Name of repository'
         required: true
         type: string
-      ref:
+      ref:dsadasdasd
         description: 'Branch name where to checkout'
         required: true
         type: string
