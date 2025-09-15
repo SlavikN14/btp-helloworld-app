@@ -11,7 +11,7 @@
 |**Module Name**<br>helloworldui5|
 |**Application Title**<br>Hello World App Title|
 |**Namespace**<br>sap.btp|
-|**UI5 Theme**<br>sap_horizon|
+|**UI5 Theme**<br>sap_horizon|іфвфівфівфівфів
 |**UI5 Version**<br>1.129.1|
 |**Enable Code Assist Libraries**<br>False|
 |**Enable TypeScript**<br>False|
