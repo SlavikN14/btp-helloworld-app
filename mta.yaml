@@ -6,7 +6,7 @@ modules:
 - name: sapbtphelloworldui5-destination-content
   type: com.sap.application.content
   requires:
-  - name: sapbtphelloworldui5-destination-service
+  - name: sapbtphelloworldui5-destination-serviceіфвівфвфів
     parameters:
       content-target: true
   - name: sapbtphelloworldui5-repo-host
